@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import photoImage from "../../public/image.png"
 
 export default function Hero() {
   return (
@@ -14,10 +15,10 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-surface-tint opacity-20 blur-3xl rounded-full"></div>
         <div className="relative w-40 h-40 rounded-full border-2 border-outline-variant p-1">
-          <img 
+          <Image
             alt="Angel Garcia Profile" 
             className="w-full h-full object-cover rounded-full" 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrLthURTT2zYbzg71WDiOR0JGsX21heg6_3CwS46G27XDg6h1vdOoqDHB9QwqU_3OkCxqoPXCJhL8ygQsuBA4l71wKmHQXHtGSf3Ozas6C8qLggdCiUg2zr6qlpCzAlSOw9MUyu6msCc05P7M7eI77MhxxOmvZxl9WA0OdpzI32zVrkq9loZeLGYJc8yyKP9SOCpRb3yI5_UX784bPGCNqIAArb7dsmdRqTFGuVu4IBnH3BSVO2iFMcwmb9XJukgzsgWwJShxsuv8"
+            src={photoImage}
           />
           <div className="absolute bottom-2 right-2 bg-white text-surface px-3 py-1 rounded-full text-xs font-bold shadow-lg">
             Ferdous
