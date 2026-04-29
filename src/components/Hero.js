@@ -65,6 +65,8 @@ export default function Hero() {
       >
         <span>React</span>
         <span className="text-white/20">/</span>
+        <span>Next.js</span>
+        <span className="text-white/20">/</span>
         <span>Node.js</span>
         <span className="text-white/20">/</span>
         <span>Tailwind CSS</span>
