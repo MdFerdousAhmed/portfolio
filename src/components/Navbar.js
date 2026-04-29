@@ -1,15 +1,33 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 w-full z-50 bg-neutral-950/80 backdrop-blur-md border-b border-slate-800/50 flex justify-between items-center px-6 py-4 max-w-full">
-      <div className="text-xl font-black tracking-tighter text-white">DEV_ARCHITECT</div>
-      <div className="hidden md:flex items-center gap-8">
-        <a className="font-inter tracking-tighter uppercase font-bold text-xs text-blue-400 after:content-[''] after:block after:h-1 after:w-1 after:bg-blue-500 after:mx-auto after:mt-1 after:rounded-full transition-transform active:scale-95" href="#">Home</a>
-        <a className="font-inter tracking-tighter uppercase font-bold text-xs text-slate-400 hover:text-white transition-colors duration-200 transition-transform active:scale-95" href="#">Projects</a>
-        <a className="font-inter tracking-tighter uppercase font-bold text-xs text-slate-400 hover:text-white transition-colors duration-200 transition-transform active:scale-95" href="#">About me</a>
+    <header className="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl border-b border-white/10">
+      <div className="flex justify-between items-center h-16 px-6 max-w-container-max mx-auto font-heading tracking-tight">
+        <motion.div 
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="text-xl font-bold tracking-tighter text-white"
+        >
+          Ferdous Ahmed
+        </motion.div>
+        
+        <nav className="hidden md:flex items-center gap-base">
+          <a className="text-primary-fixed-dim font-bold border-b border-primary-fixed-dim pb-1 hover:opacity-80 transition-all duration-200 active:scale-95" href="#">Home</a>
+          <a className="text-outline font-medium px-md hover:text-primary-fixed-dim hover:opacity-80 transition-all duration-200 active:scale-95" href="#">Projects</a>
+          <a className="text-outline font-medium px-md hover:text-primary-fixed-dim hover:opacity-80 transition-all duration-200 active:scale-95" href="#">About Me</a>
+        </nav>
+        
+        <motion.button 
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="bg-primary text-on-primary font-label text-label px-md py-sm rounded-lg hover:scale-[1.02] transition-transform active:scale-95"
+        >
+          Contact me
+        </motion.button>
       </div>
-      <button className="bg-white text-black px-4 py-2 font-inter tracking-tighter uppercase font-bold text-xs hover:bg-primary-container transition-all active:scale-95">
-        GET_IN_TOUCH
-      </button>
-    </nav>
+    </header>
   );
 }

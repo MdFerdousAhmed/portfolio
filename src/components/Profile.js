@@ -1,31 +1,55 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function Profile() {
   return (
-    <section className="glass-panel p-12 rounded-[40px] flex flex-col md:flex-row items-center gap-12 border-white/10">
-      <div className="shrink-0 relative">
-        <div className="absolute inset-0 bg-primary/30 blur-2xl rounded-full"></div>
-        <img 
-          alt="Developer Portrait" 
-          className="w-48 h-48 rounded-full border-[4px] border-white relative z-10 object-cover" 
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGJyy0iDxNwK6Ghm_qepVY6-WyOz3qfCHZ2YpbQgDSGGSXLnPVXbCrDtGRZNOUPiQMkN_ufoXnmQYfj8D9QTB8Vrk0Y3-aTww8or4Zmtu23yKSAPynN3tSfCm5bxnRW5IC52rvL7n8pM5QSNKJHRjqn3oO5hh63Hsmk9MD2ZKzr3RjrW5Y47MxGMsYijEZIc73JeLNDPXZZOezjwXkgeduIxEdTQl33nR5W4fAE2ijd9qmtoyJJTnYRq5kvBm9-sLH9SfJScKn2_E"
-        />
-      </div>
-      <div className="flex-1 text-center md:text-left space-y-4">
-        <h3 className="text-headline-lg uppercase">ALEX_RIVER</h3>
-        <p className="text-on-surface-variant">
-          Principal Architect at TERMINAL_VELOCITY. Obsessed with high-performance systems, decentralized data structures, and the intersection of human-computer interaction.
-        </p>
-        <div className="flex justify-center md:justify-start gap-4 pt-4">
-          <a className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-primary hover:text-primary transition-all" href="#">
-            <span className="material-symbols-outlined text-[20px]">hub</span>
-          </a>
-          <a className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-primary hover:text-primary transition-all" href="#">
-            <span className="material-symbols-outlined text-[20px]">share</span>
-          </a>
-          <a className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-primary hover:text-primary transition-all" href="#">
-            <span className="material-symbols-outlined text-[20px]">alternate_email</span>
-          </a>
+    <section className="max-w-container-max mx-auto px-6 py-xl grid md:grid-cols-2 gap-xl items-center">
+      <motion.div 
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="order-2 md:order-1"
+      >
+        <span className="text-secondary-fixed font-label text-label uppercase tracking-widest mb-xs block">The Developer</span>
+        <h2 className="font-h2 text-h2 text-white mb-md">Engineering experiences, not just websites.</h2>
+        <div className="space-y-md text-outline font-body-lg">
+          <p>
+            I'm a Full-Stack Engineer based in San Francisco, specializing in building high-performance web applications. My philosophy centers on "Clean Code" and "User-First Design."
+          </p>
+          <p>
+            With over 3 years of experience, I've partnered with startups and established brands to deliver digital products that are both visually stunning and technically robust.
+          </p>
         </div>
-      </div>
+        <div className="mt-lg flex items-center gap-md">
+          <div className="text-center border-r border-white/10 pr-md">
+            <div className="text-2xl font-bold text-white">50+</div>
+            <div className="text-xs uppercase text-outline">Projects</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white">3+</div>
+            <div className="text-xs uppercase text-outline">Years Exp</div>
+          </div>
+        </div>
+      </motion.div>
+
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="order-1 md:order-2"
+      >
+        <div className="relative aspect-square rounded-2xl overflow-hidden border border-white/10">
+          <img 
+            className="w-full h-full object-cover" 
+            alt="Minimalist workspace" 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkbvTRDYRBSk7tDPwPRuYRp7pr221xhzsLz7dr2F-yW8c5fC04YK46BbLbJazTBoANIMO8qtOCOuew_ACRgAVmIiuc9nY1dGad49wa7y2jpKc_9mpwGocnBw-h8yfhslfaZbWq4W-wWpOcWzSS2FgIQOwyY3kxNF82dHBCvROb9NqmLlN4GBpqXjiQKrhJqIcH5jHYBPrVsoLM60RtxzLDRrsppf-MYfoPK6-NLGS_PLEed5YZcjBeDZ4obpTVkfW2TG2_ob5iWMw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 to-transparent opacity-60"></div>
+        </div>
+      </motion.div>
     </section>
   );
 }

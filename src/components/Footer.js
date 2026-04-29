@@ -1,17 +1,12 @@
 export default function Footer() {
   return (
-    <footer className="w-full py-12 border-t border-slate-800 bg-neutral-950 mt-32">
-      <div className="flex flex-col md:flex-row justify-between items-center px-8 gap-4 max-w-7xl mx-auto">
-        <div className="font-inter text-[10px] tracking-widest uppercase text-slate-500">
-          ©2024 TERMINAL_VELOCITY. ALL_RIGHTS_RESERVED.
-        </div>
-        <div className="flex items-center gap-8">
-          <a className="font-inter text-[10px] tracking-widest uppercase text-slate-500 hover:text-blue-300 transition-colors opacity-80 hover:opacity-100" href="#">GITHUB</a>
-          <a className="font-inter text-[10px] tracking-widest uppercase text-slate-500 hover:text-blue-300 transition-colors opacity-80 hover:opacity-100" href="#">LINKEDIN</a>
-          <a className="font-inter text-[10px] tracking-widest uppercase text-slate-500 hover:text-blue-300 transition-colors opacity-80 hover:opacity-100" href="#">SOURCE_CODE</a>
-        </div>
-        <div className="font-inter text-[10px] tracking-widest uppercase text-blue-400">
-          STK_V2.9.1
+    <footer className="w-full py-16 mt-20 bg-surface-container-lowest border-t border-white/5">
+      <div className="max-w-container-max mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left font-heading text-sm uppercase tracking-widest">
+        <div className="text-outline font-medium">© 2024 Angel Garcia. Engineered for the web.</div>
+        <div className="flex gap-lg">
+          <a className="text-outline hover:text-primary-fixed-dim transition-colors duration-300 hover:translate-y-[-2px] transition-transform" href="#">GitHub</a>
+          <a className="text-outline hover:text-primary-fixed-dim transition-colors duration-300 hover:translate-y-[-2px] transition-transform" href="#">LinkedIn</a>
+          <a className="text-outline hover:text-primary-fixed-dim transition-colors duration-300 hover:translate-y-[-2px] transition-transform" href="#">Instagram</a>
         </div>
       </div>
     </footer>
