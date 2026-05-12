@@ -1,7 +1,11 @@
+import Header from "@/components/ui/Header";
 import "./globals.css";
-import { Space_Grotesk, Inter } from "next/font/google";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { Space_Grotesk, Inter, Geist } from "next/font/google";
+import PageTransition from "@/components/ui/PageTransition";
+import StairTransition from "@/components/ui/StairTransition";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -16,20 +20,22 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Angel Garcia | Portfolio",
+  title: "Ferdous Ahmed | Portfolio",
   description: "Building modern web applications with a focus on aesthetics, functionality and accessibility.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className={cn("dark", "font-sans", geist.variable)} data-theme="dark">
       <head>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
       <body className={`${spaceGrotesk.variable} ${inter.variable} antialiased bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container`}>
-        <Navbar />
-        {children}
-        <Footer />
+          <Header/>
+          <StairTransition/>
+          <PageTransition>
+            {children}
+          </PageTransition>
+         
       </body>
     </html>
   );
