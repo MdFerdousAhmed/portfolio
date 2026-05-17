@@ -24,7 +24,7 @@ const projects = [
       { name: "Tailwind.css" },
       { name: "Javascript" },
     ],
-    image: "/assets/work/portfolio1.png",
+    image: "/assets/work/portfolio.png",
     live: "https://portfolio-one-sepia-44.vercel.app",
     github: "https://github.com/MdFerdousAhmed/portfolio",
   },
@@ -117,7 +117,7 @@ const Work = () => {
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5  flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-sky-400 " />
+                        <BsArrowUpRight className="text-white text-3xl group-hover:text-green-400 " />
                         <TooltipContent>
                           <p>Live project</p>
                         </TooltipContent>
