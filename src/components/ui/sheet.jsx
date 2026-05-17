@@ -69,7 +69,7 @@ function SheetContent({
         {showCloseButton && (
           <SheetPrimitive.Close data-slot="sheet-close" asChild>
             <Button variant="ghost" className="absolute top-8 right-8 transition-opacity outline-none" size="icon-sm">
-              <IoMdClose className="text-3xl text-sky-400" />
+              <IoMdClose className="text-3xl text-green-400" />
               <span className="sr-only">Close</span>
             </Button>
           </SheetPrimitive.Close>

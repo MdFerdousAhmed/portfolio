@@ -27,17 +27,19 @@ const Stairs = () => {
        * the delay for each div is calculated dynamically based 
        */}
 
-       {
+      {
         [...Array(6)].map((_, index) => {
-          <motion.div key={index} variants={stairsAnimation} initial="initial" animate="animate" exit="exit" transition={{
-            duration: 0.4,
-            ease: 'easeInOut',
-            delay: reverseIndex(index) * 0.1,
-          }}
-          className="h-full w-full bg-white relative"
-          />
+          return (
+            <motion.div key={index} variants={stairsAnimation} initial="initial" animate="animate" exit="exit" transition={{
+              duration: 0.4,
+              ease: 'easeInOut',
+              delay: reverseIndex(index) * 0.1,
+            }}
+              className="h-full w-full bg-black/80 relative"
+            />
+          )
         })
-       }
+      }
     </>
   );
 };

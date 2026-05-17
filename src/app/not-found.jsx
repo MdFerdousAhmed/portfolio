@@ -15,7 +15,7 @@ export default function NotFound() {
 
       <Link
         href="/"
-        className="px-6 py-3 bg-sky-500 text-white rounded-lg"
+        className="px-6 py-3 bg-green-500 text-white rounded-lg"
       >
         Go Home
       </Link>
