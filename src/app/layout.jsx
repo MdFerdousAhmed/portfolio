@@ -16,10 +16,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={cn("dark", "font-sans", jetbrainsMono.variable)} data-theme="dark">
+    <html lang="en">
       <head>
       </head>
-      <body className={`${jetbrainsMono.variable.className} antialiased bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container`}>
+      <body className={jetbrainsMono.variable.className} >
           <Header/>
           <StairTransition/>
           <PageTransition>
