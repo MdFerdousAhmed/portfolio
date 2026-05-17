@@ -24,7 +24,7 @@ const projects = [
       { name: "Tailwind.css" },
       { name: "Javascript" },
     ],
-    image: "/assets/work/portfolio.png",
+    image: "/assets/work/portfolio1.png",
     live: "https://portfolio-one-sepia-44.vercel.app",
     github: "https://github.com/MdFerdousAhmed/portfolio",
   },
